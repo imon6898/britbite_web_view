@@ -1,5 +1,7 @@
+import 'package:britbite/screens/print_receipt_screen/controller/print_receipt_screen_controller.dart';
 import 'package:get/get.dart';
 
+import '../screens/company_screens/controller/companylist_controller.dart';
 import '../screens/splash_screens/controller/splash_controller.dart';
 import '../screens/web_view/controller/web_view_screen_controller.dart';
 
@@ -9,6 +11,8 @@ class ViewModelBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<SplashScreenController>(() => SplashScreenController(), fenix: true);
+    Get.lazyPut<CompanylistController>(() => CompanylistController(), fenix: true);
+    Get.lazyPut<PrintReceiptScreenController>(() => PrintReceiptScreenController(), fenix: true);
     Get.lazyPut<WebViewScreenController>(() => WebViewScreenController(), fenix: true);
     // Get.lazyPut<LoginController>(() => LoginController(), fenix: true);
     // Get.lazyPut<MailOtpController>(() => MailOtpController(), fenix: true);

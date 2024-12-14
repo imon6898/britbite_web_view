@@ -1,16 +1,12 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'dart:async';
 
 import '../../../routes/app_routes.dart';
 
-
 class SplashScreenController extends GetxController with GetTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<double> scaleAnimation;
-
 
   @override
   void onInit() {
@@ -30,15 +26,12 @@ class SplashScreenController extends GetxController with GetTickerProviderStateM
 
     animationController.forward();
 
-    // Retrieve the auth token from local storage
-
-
-    // Navigate to the appropriate screen after 3 seconds
+    // Navigate to WebViewScreen after a delay
     Future.delayed(const Duration(seconds: 3), () {
-
-        //Get.offAndToNamed('/homeScreen');
-        Get.offAllNamed(AppRoutes.WebViewScreen, arguments: ["webView".tr, "https://britbite.com/"]);
-
+      Get.offAllNamed(
+        AppRoutes.WebViewScreen,
+        arguments: ["Web View", "https://britbite.com/user/login"],
+      );
     });
   }
 

@@ -40,6 +40,12 @@ dependencies:
   webview_flutter: ^4.7.0
   flutter_screenutil: ^5.9.0
   fluttertoast: ^8.2.5
+  pdf: ^3.11.0
+  printing: ^5.13.4
+  http: ^1.2.2
+
+
+
 
 dev_dependencies:
   flutter_test:
